@@ -65,7 +65,7 @@ age-calculator/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/CodeAlpha_AgeCalculator.git
+   git clone https://github.com/himanshu624io/CodeAlpha_AgeCalculator.git
    ```
 
 2. **Open the project folder**
@@ -85,7 +85,7 @@ That's it! No dependencies, no build step needed. 🎉
 
 ## 🌐 Live Demo
 
-👉 **[View Live on GitHub Pages](https://YOUR_USERNAME.github.io/CodeAlpha_AgeCalculator/)**
+👉 **[View Live on GitHub Pages](https://himanshu624io.github.io/CodeALpha_Age_Calculator/)**
 
 ---
 
@@ -112,8 +112,8 @@ This project was built as **Task 1** of the Web Development Internship at **[Cod
 **Himanshu**
 - 🎓 BCA Student
 - 💼 Web Dev Intern @ CodeAlpha
-- 🔗 [LinkedIn](https://linkedin.com/in/YOUR_PROFILE)
-- 🐙 [GitHub](https://github.com/YOUR_USERNAME)
+- 🔗 [LinkedIn](https://www.linkedin.com/in/himanshu-maddhesiya )
+- 🐙 [GitHub](https://github.com/himanshu624io)
 
 ---
 
