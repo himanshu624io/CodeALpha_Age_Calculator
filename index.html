@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Age Calculator — CodeAlpha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <h5>Made By Himanshu Maddheshiya</h5>
+
+  <!-- Floating orbs background -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="brand">
+          <span class="brand-dot"></span>
+          <span>CodeAlpha</span>
+        </div>
+        <span class="task-label">Task 01 — Age Calculator</span>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <p class="hero-eyebrow">Discover your age</p>
+      <h1 class="hero-title">How old<br/><em>are you?</em></h1>
+      <p class="hero-sub">Enter your date of birth and get a beautiful breakdown of your life in numbers.</p>
+    </section>
+
+    <!-- Calculator Card -->
+    <section class="calculator-section">
+      <div class="calc-card">
+
+        <div class="input-area">
+          <div class="input-group">
+            <label for="inp-day">
+              <span class="label-num">01</span> Day
+            </label>
+            <input
+              id="inp-day"
+              type="number"
+              min="1" max="31"
+              placeholder="DD"
+              inputmode="numeric"
+            />
+          </div>
+          <div class="divider-line" aria-hidden="true">/</div>
+          <div class="input-group">
+            <label for="inp-month">
+              <span class="label-num">02</span> Month
+            </label>
+            <input
+              id="inp-month"
+              type="number"
+              min="1" max="12"
+              placeholder="MM"
+              inputmode="numeric"
+            />
+          </div>
+          <div class="divider-line" aria-hidden="true">/</div>
+          <div class="input-group">
+            <label for="inp-year">
+              <span class="label-num">03</span> Year
+            </label>
+            <input
+              id="inp-year"
+              type="number"
+              min="1900" max="2025"
+              placeholder="YYYY"
+              inputmode="numeric"
+            />
+          </div>
+        </div>
+
+        <p class="error-msg" id="error-msg" role="alert" aria-live="polite"></p>
+
+        <button class="calc-btn" id="calc-btn" onclick="calculateAge()">
+          <span class="btn-text">Calculate Age</span>
+          <span class="btn-icon" aria-hidden="true">→</span>
+        </button>
+      </div>
+
+      <!-- Result Panel -->
+      <div class="result-panel" id="result-panel" aria-live="polite">
+
+        <div class="result-hero-row">
+          <div class="result-age-big">
+            <span class="age-number" id="res-years">--</span>
+            <span class="age-label">years old</span>
+          </div>
+          <div class="result-breakdown">
+            <div class="breakdown-pill">
+              <span class="bp-val" id="res-months">--</span>
+              <span class="bp-key">months</span>
+            </div>
+            <div class="breakdown-pill">
+              <span class="bp-val" id="res-days">--</span>
+              <span class="bp-key">days</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card" style="--delay:.05s">
+            <div class="stat-icon">📅</div>
+            <div class="stat-info">
+              <span class="stat-val" id="res-total-days">—</span>
+              <span class="stat-key">Total Days Lived</span>
+            </div>
+          </div>
+          <div class="stat-card" style="--delay:.1s">
+            <div class="stat-icon">🗓️</div>
+            <div class="stat-info">
+              <span class="stat-val" id="res-total-weeks">—</span>
+              <span class="stat-key">Total Weeks</span>
+            </div>
+          </div>
+          <div class="stat-card" style="--delay:.15s">
+            <div class="stat-icon">⏰</div>
+            <div class="stat-info">
+              <span class="stat-val" id="res-hours">—</span>
+              <span class="stat-key">Total Hours</span>
+            </div>
+          </div>
+          <div class="stat-card" style="--delay:.2s">
+            <div class="stat-icon">🎂</div>
+            <div class="stat-info">
+              <span class="stat-val" id="res-next-bday">—</span>
+              <span class="stat-key">Next Birthday</span>
+            </div>
+          </div>
+          <div class="stat-card" style="--delay:.25s">
+            <div class="stat-icon">🌟</div>
+            <div class="stat-info">
+              <span class="stat-val" id="res-born-day">—</span>
+              <span class="stat-key">Born On</span>
+            </div>
+          </div>
+          <div class="stat-card" style="--delay:.3s">
+            <div class="stat-icon">🔢</div>
+            <div class="stat-info">
+              <span class="stat-val" id="res-zodiac">—</span>
+              <span class="stat-key">Zodiac Sign</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="life-bar-wrap">
+          <div class="life-bar-label">
+            <span>Life Progress <em>(avg. 80 yrs)</em></span>
+            <span id="life-percent">0%</span>
+          </div>
+          <div class="life-bar-track">
+            <div class="life-bar-fill" id="life-bar-fill"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>Built for <strong>CodeAlpha</strong> Web Dev Internship &nbsp;·&nbsp; HTML · CSS · JS</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
