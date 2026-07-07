@@ -85,7 +85,7 @@ That's it! No dependencies, no build step needed. 🎉
 
 ## 🌐 Live Demo
 
-👉 **[View Live on GitHub Pages](https://himanshu624io.github.io/CodeALpha_Age_Calculator/)**
+👉 **[View Live on GitHub Pages](https://himanshu624io.github.io/Age_Calculator/)**
 
 ---
 
@@ -96,22 +96,13 @@ That's it! No dependencies, no build step needed. 🎉
 - Making UI feel smooth with CSS transitions and animations
 - Writing clean, readable vanilla JavaScript
 
----
-
-## 🏢 Internship Details
-
-This project was built as **Task 1** of the Web Development Internship at **[CodeAlpha](https://www.codealpha.tech/)**.
-
-- 🔗 LinkedIn Post: *[link to your post]*
-- 📂 GitHub Repo: *[this repo]*
-
----
+  ---
 
 ## 👤 Author
 
 **Himanshu**
 - 🎓 BCA Student
-- 💼 Web Dev Intern @ CodeAlpha
+- 💼 Web Dev Intern @Shadowfox
 - 🔗 [LinkedIn](https://www.linkedin.com/in/himanshu-maddhesiya )
 - 🐙 [GitHub](https://github.com/himanshu624io)
 
